@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "AzureBukkit", "AzureBukkit\AzureBukkit.ccproj", "{F81FE475-2DAB-487E-BFA5-6E34F298C336}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BukkitServer", "BukkitServer\BukkitServer.csproj", "{85241D4E-0520-4392-AA6E-7A7DFE8BCE7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F81FE475-2DAB-487E-BFA5-6E34F298C336}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F81FE475-2DAB-487E-BFA5-6E34F298C336}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F81FE475-2DAB-487E-BFA5-6E34F298C336}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F81FE475-2DAB-487E-BFA5-6E34F298C336}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85241D4E-0520-4392-AA6E-7A7DFE8BCE7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85241D4E-0520-4392-AA6E-7A7DFE8BCE7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85241D4E-0520-4392-AA6E-7A7DFE8BCE7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85241D4E-0520-4392-AA6E-7A7DFE8BCE7E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

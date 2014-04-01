@@ -1,0 +1,38 @@
+2014-04-01 22:16:07 [INFO] Starting minecraft server version 1.6.4
+2014-04-01 22:16:07 [INFO] Loading properties
+2014-04-01 22:16:07 [WARNING] server.properties does not exist
+2014-04-01 22:16:07 [INFO] Generating new properties file
+2014-04-01 22:16:07 [INFO] Default game type: SURVIVAL
+2014-04-01 22:16:07 [INFO] Generating keypair
+2014-04-01 22:16:07 [INFO] Starting Minecraft server on *:25565
+2014-04-01 22:16:07 [INFO] This server is running CraftBukkit version git-Bukkit-1.6.4-R2.0-b2918jnks (MC: 1.6.4) (Implementing API version 1.6.4-R2.0)
+2014-04-01 22:16:07 [WARNING] Failed to load operators list: java.io.FileNotFoundException: .\ops.txt (The system cannot find the file specified)
+2014-04-01 22:16:07 [WARNING] Failed to load white-list: java.io.FileNotFoundException: .\white-list.txt (The system cannot find the file specified)
+2014-04-01 22:16:07 [INFO] Preparing level "world"
+2014-04-01 22:16:08 [WARNING] Unable to find spawn biome
+2014-04-01 22:16:12 [INFO] Preparing start region for level 0 (Seed: 1076884030850301657)
+2014-04-01 22:16:13 [INFO] Preparing spawn area: 16%
+2014-04-01 22:16:14 [INFO] Preparing spawn area: 27%
+2014-04-01 22:16:15 [INFO] Preparing spawn area: 39%
+2014-04-01 22:16:16 [INFO] Preparing spawn area: 55%
+2014-04-01 22:16:17 [INFO] Preparing spawn area: 70%
+2014-04-01 22:16:18 [INFO] Preparing spawn area: 85%
+2014-04-01 22:16:19 [INFO] Preparing spawn area: 97%
+2014-04-01 22:16:19 [INFO] Preparing start region for level 1 (Seed: 1076884030850301657)
+2014-04-01 22:16:20 [INFO] Preparing spawn area: 23%
+2014-04-01 22:16:21 [INFO] Preparing spawn area: 38%
+2014-04-01 22:16:22 [INFO] Preparing spawn area: 52%
+2014-04-01 22:16:23 [INFO] Preparing spawn area: 72%
+2014-04-01 22:16:24 [INFO] Preparing spawn area: 87%
+2014-04-01 22:16:25 [INFO] Preparing start region for level 2 (Seed: 1076884030850301657)
+2014-04-01 22:16:26 [INFO] Preparing spawn area: 54%
+2014-04-01 22:16:27 [INFO] Done (19.347s)! For help, type "help" or "?"
+2014-04-01 22:16:37 [INFO] CONSOLE: Stopping the server..
+2014-04-01 22:16:37 [INFO] Stopping server
+2014-04-01 22:16:37 [INFO] Saving players
+2014-04-01 22:16:37 [WARNING] DSCT: socket closed
+2014-04-01 22:16:37 [INFO] Closing listening thread
+2014-04-01 22:16:37 [INFO] Saving worlds
+2014-04-01 22:16:37 [INFO] Saving chunks for level 'world'/Overworld
+2014-04-01 22:16:39 [INFO] Saving chunks for level 'world_nether'/Nether
+2014-04-01 22:16:39 [INFO] Saving chunks for level 'world_the_end'/The End
