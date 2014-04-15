@@ -9,9 +9,21 @@ namespace BukkitServer
 {
     public class JavaManager
     {
+        public JavaManager(FileManager fileManager)
+        {
+            FileManager = fileManager;
+        }
+
+        public FileManager FileManager { get; set; }
+
         const string InstallerPath = "Resources\\jre-7u51-windows-x64.exe";
 
-        const string JavaDirectory = "WorkingDir\\Java";
+        public string JavaDirectory {
+            get
+            {
+                return System.IO.Path.Combine(FileManager.WorkingDirectory, "Java");
+            }
+        }
 
         public string FullJavaDirectory
         {

@@ -38,8 +38,9 @@ namespace BukkitServer
             //Process p = new Process();
             //p.
             //p.Start();
+            FileManager fileManager = new FileManager();
 
-            JavaManager javaManager = new JavaManager();
+            JavaManager javaManager = new JavaManager(fileManager);
             javaManager.Install();
 
             CraftBukkitManager = new CraftBukkitManager(javaManager);

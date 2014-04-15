@@ -33,10 +33,18 @@ namespace BukkitServer
 
             process.StartInfo.RedirectStandardInput = true;
             process.StartInfo.UseShellExecute = false;
-            process.StartInfo.FileName = @"C:\Program Files (x86)\Java\jre6\bin\java.exe";//javaManager.FullJavaExecutable;
+            process.StartInfo.FileName = javaManager.FullJavaExecutable;
+            
+            process.StartInfo.FileName = @"C:\Program Files (x86)\Java\jre6\bin\java.exe";
+            
             process.StartInfo.Arguments = string.Format("-Xmx1024M -jar \"{0}\" -o true --nojline", System.IO.Path.GetFullPath(BukkitPath));
             //process.StartInfo.CreateNoWindow = true;
             process.Start();
+        }
+
+        private void Save()
+        {
+            javaManager.FileManager.Save();
         }
 
         public void Stop()
@@ -46,6 +54,8 @@ namespace BukkitServer
                 process.StandardInput.WriteLine("stop");
                 process.WaitForExit();
             }
+
+            Save();
         }
     }
 }
