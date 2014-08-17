@@ -4,6 +4,7 @@
     <Instances count="1" />
     <ConfigurationSettings>
       <Setting name="Microsoft.WindowsAzure.Plugins.Diagnostics.ConnectionString" value="UseDevelopmentStorage=true" />
+      <Setting name="BackupConnectionString" value="DefaultEndpointsProtocol=https;AccountName=azurebukkit;AccountKey=Vv6Sy+tl3VODT4WRc8z9N/f6U3y6Cdxcjh5YTkU1vAq2hPYuR3ySxTPnonux0SqXJukXFPIYKe2wbDgGQRpLPg==" />
     </ConfigurationSettings>
   </Role>
 </ServiceConfiguration>

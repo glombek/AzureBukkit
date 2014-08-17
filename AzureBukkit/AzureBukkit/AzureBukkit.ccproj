@@ -48,11 +48,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BukkitServerContent\" />
+    <Folder Include="Profiles" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BukkitServerContent\diagnostics.wadcfg">
       <SubType>Content</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishProfile Include="Profiles\AzureBukkitProduction.azurePubxml" />
   </ItemGroup>
   <!-- Import the target files for this project template -->
   <PropertyGroup>

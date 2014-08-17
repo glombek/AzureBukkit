@@ -29,15 +29,30 @@ namespace BukkitServer
 
         public void Start()
         {
+            //javaManager.FileManager.CreateFileStructure();
+
             process = new Process();
 
             process.StartInfo.RedirectStandardInput = true;
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.FileName = javaManager.FullJavaExecutable;
             
-            process.StartInfo.FileName = @"C:\Program Files (x86)\Java\jre6\bin\java.exe";
-            
-            process.StartInfo.Arguments = string.Format("-Xmx1024M -jar \"{0}\" -o true --nojline", System.IO.Path.GetFullPath(BukkitPath));
+            //TODO: Comment Out
+            //process.StartInfo.FileName = @"C:\Program Files (x86)\Java\jre6\bin\java.exe";
+
+            var args = new ArgManager();
+            args.Add("-Xmx1024M");
+            args.Add("-jar", string.Format("\"{0}\"", System.IO.Path.GetFullPath(BukkitPath)));
+            args.Add("-o", true);
+            args.Add("--nojline");
+
+            args.Add("-b", "{0}/MC/bukkit.yml", javaManager.FileManager.WorkingDirectory);
+            args.Add("-c", "{0}/MC/server.properties", javaManager.FileManager.WorkingDirectory);
+            args.Add("-P", "{0}/MC/plugins/", javaManager.FileManager.WorkingDirectory);
+            args.Add("-W", "{0}/MC/worlds/", javaManager.FileManager.WorkingDirectory);
+
+
+            process.StartInfo.Arguments = args.ToString();
             //process.StartInfo.CreateNoWindow = true;
             process.Start();
         }
@@ -56,6 +71,46 @@ namespace BukkitServer
             }
 
             Save();
+        }
+
+        class ArgManager
+        {
+            private Dictionary<string, object> Arguments { get; set; }
+
+            public ArgManager()
+            {
+                Arguments = new Dictionary<string, object>();
+            }
+
+            public void Add(string key, object val = null)
+            {
+                Arguments.Add(key, val);
+            }
+
+            public void Add(string key, string format, params object[] values)
+            {
+                Arguments.Add(key, string.Format(format, values));
+            }
+
+            public override string ToString()
+            {
+                StringBuilder sb = new StringBuilder();
+                foreach (var arg in Arguments)
+                {
+                    if (arg.Value == null)
+                    {
+                        sb.Append(arg.Key);
+                    }
+                    else
+                    {
+                        sb.Append(arg.Key);
+                        sb.Append(" ");
+                        sb.Append(arg.Value);
+                    }
+                    sb.Append(" ");
+                }
+                return sb.ToString();
+            }
         }
     }
 }

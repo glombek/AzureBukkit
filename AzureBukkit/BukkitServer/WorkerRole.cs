@@ -38,13 +38,65 @@ namespace BukkitServer
             //Process p = new Process();
             //p.
             //p.Start();
-            FileManager fileManager = new FileManager();
 
-            JavaManager javaManager = new JavaManager(fileManager);
-            javaManager.Install();
+            FileManager fileManager = null;
 
-            CraftBukkitManager = new CraftBukkitManager(javaManager);
-            CraftBukkitManager.Start();
+
+            try
+            {
+                fileManager = new FileManager();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed loading FileManager.", ex);
+            }
+
+            try
+            {
+                fileManager.CreateFileStructure();
+
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed creating file structure.", ex);
+            }
+
+            JavaManager javaManager = null;
+
+            try
+            {
+                javaManager = new JavaManager(fileManager);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed loading JavaManager.", ex);
+            }
+            try
+            {
+                javaManager.Install();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed installing Java.", ex);
+            }
+
+            try
+            {
+                CraftBukkitManager = new CraftBukkitManager(javaManager);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed loading CraftBukkitManager.", ex);
+            }
+
+            try
+            {
+                CraftBukkitManager.Start();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed starting CraftBukkit.", ex);
+            }
 
             return base.OnStart();
         }
